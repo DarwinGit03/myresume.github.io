@@ -1,0 +1,42 @@
+.youtube-embed{
+	position: absolute;
+	z-index: 200;
+/*	background: rgba(0, 0, 0, 0.2);*/
+	width: 100%;
+	padding: 100px;
+	visibility: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.youtube-content{	
+	display: flex;
+	justify-content: center;
+	place-content: center;
+}
+.youtube-embed ion-icon{
+	top: 2%;
+	width: 40px;
+	height: 40px;
+}
+.close-embed{
+	visibility: visible;
+}
+.youtube-content iframe{
+	width: 90%;
+	height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+	.youtube-content iframe{
+		width: 280px;
+		height: 300px;
+	}
+	.youtube-embed ion-icon{
+		display: flex;
+		justify-content: center;
+		place-content: center;
+		text-align: center;
+	}
+}

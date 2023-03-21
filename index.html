@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/slidercontent.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="css/webcontent.css">
+	<link rel="stylesheet" type="text/css" href="css/cardbutton.css">
+	<title>navigation bar</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<script src="log.js"></script>
+	<script>
+		// once the scroll down then ito yung mangyari
+		jQuery(function($){
+			var $navbar = $('header');
+			$(window).scroll(function(event){
+				var $current = $(this).scrollTop();
+				if($current > 0){
+					$navbar.addClass('arrow-show');
+				}
+				else{
+					$navbar.removeClass('arrow-show');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="containerr">
+	<header>
+		<a href="#">
+		<div class="logo">
+			<div class="logo-background port">
+				<span>PORT</span>
+			</div>
+			<div class="logo-background folio">
+				<span>FOLIO</span>
+			</div>
+		</div>
+		</a>
+		<nav class="nav" id="nav-menu">
+			<ion-icon name="close-outline" class="header_close" id="close_menu"></ion-icon>
+			
+			<ul class="nav_list">
+				<li class="nav_item"><a href="" style="--i:1;" class="nav_link active">Home</a></li>
+				<li class="nav_item"><a href="" style="--i:2;" class="nav_link">About</a></li>
+				<li class="nav_item"><a href="" style="--i:3;" class="nav_link">Portfolio</a></li>
+				<li class="nav_item"><a href="" style="--i:4;" class="nav_link">Contact</a></li>
+				<li class="nav_item"><a href="" style="--i:5;" class="nav_link">Skill</a></li>
+		<div class="btn-background">
+			<button class="btn-getin">GET IN TOUCH</button>
+		</div>
+			</ul>
+		</nav>
+		<div class="menu-icons" onclick="showdialog()">
+			<p>share<ion-icon name="share-social-outline" class="icon-share"></ion-icon>Social</p>
+		</div>
+
+		<ion-icon name="menu-outline" class="header_toggle" id="toggle_menu"></ion-icon>
+
+	</header>
+
+	<!-- Share link -->
+		<div class="share-social" id="sharelink">
+			<div class="social-links">
+				<div class="x-btn">
+					<ion-icon name="close-circle-outline" onclick="closedialog()"></ion-icon>
+				</div>
+				<h1>Social media share links</h1>
+				<div class="menu-icons sharelink">
+					<ion-icon name="logo-facebook" class="icon-facebook"></ion-icon>
+					<ion-icon name="logo-instagram" class="icon-facebook"></ion-icon>
+					<ion-icon name="logo-twitter" class="icon-facebook"></ion-icon>
+					<ion-icon name="logo-tiktok" class="icon-facebook"></ion-icon>
+					<ion-icon name="copy-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+
+		<div class="arrow-up">
+			<a href="#"><ion-icon name="chevron-up-outline"></ion-icon></a>
+		</div>
+
+	<div class="whole-cover">
+		<div class="cover-page">
+			<div class="cover-con mydescription">
+				<p>Hi I'am</p>
+				<h2>Darwin Ortozar</h2>
+				<p class="text-animation">I do <span class="multiple-type"></span></p>
+				<!-- <h2>Hello world</h2> -->
+				<div class="btn-background cvdownload">
+					<button class="btn-getin">DOWNLOAD CV</button>
+				</div>
+				
+				<div class="menu-icons sociallogo">
+					<a href="https://www.facebook.com/darwin.ortozar.5" target="_blank"><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon></a>
+					<a href="https://www.youtube.com/channel/UCXUOTq7fxMgtyyJaJlK7E5Q" target="_blank"><ion-icon name="logo-youtube" class="icon-youtube"></ion-icon></a>
+					<a href="https://www.facebook.com/darwin.ortozar.5" target="_blank"><ion-icon name="logo-tiktok" class="icon-tiktok"></ion-icon></a>
+					<a href="https://www.linkedin.com/in/darwin-ortozar-82b32b268/" target="_blank"><ion-icon name="logo-linkedin" class="icon-linkedin"></ion-icon></a>
+					<a href="https://github.com/DarwinGit03" target="_blank"><ion-icon name="logo-github" class="icon-tiktok"></ion-icon></a>
+				</div>
+
+
+			</div>
+
+			<div class="cover-con myprofile">
+				<img src="img/mypicture.png" alt="my-image">
+				<p><i>"It is never too late to be what you might have been."</i></p>
+			</div>
+		</div>
+
+<!-- This line of code are the slider -->
+	<div class="body">
+	<div class="slide-container swiper">
+		<div class="project-title">
+			<h1>My Projects</h1>
+			<span>My projects are made by the ff languages and platform:</span>
+			<p><b>HTML, CSS, Javascript, Java, Visual basic .net, MIT app inventor</b></p>
+			<span>All sample video's are posted, Please visit my <a href="">TIKTOK</a> and <a href="">YOUTUBE</a></span>
+			
+		</div>
+
+<!-- For vide embeded -->
+			<div class="youtube-embed" id="embed">
+				<div class="x-btn">
+					<ion-icon name="close-circle-outline" onclick="embedclose()"></ion-icon>
+				</div>
+				<div class="youtube-content">
+					<iframe class="embed-responsive-item" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+				</div>
+			</div>
+<!-- Slider project -->
+		<div class="slide-content">
+			<div class="card-wrapper swiper-wrapper">
+
+				<div class="card swiper-slide">
+					<div class="image-content">
+						<span class="overlay"></span>
+						<div class="card-image">
+							<img src="img/laundry.png" alt="" class="card-img">
+						</div>
+					</div>
+					<div class="card-content">
+						<h2 class="name">Laundry management system</h2>
+						<p class="description">This project are compose of three parts :</p>
+						<p class="description text">- <b>Website application</b> -</p>
+						<p class="description text">- <b>Management (VB.net)</b> -</p>
+						<p class="description text">- <b>Android app (MIT APP)</b> -</p>
+						<div class="btn-content">
+							<!-- <button class="button">View more</button> -->
+							<!-- <button class="btn button" onclick="embedshow()">Watch now</button> -->
+							<input type="button" class="btn button" value="Watchnow" onclick="embedshow()">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="card swiper-slide">
+					<div class="image-content">
+						<span class="overlay"></span>
+						<div class="card-image">
+							<img src="img/resort.png" alt="" class="card-img">
+						</div>
+					</div>
+					<div class="card-content">
+						<h2 class="name">Resort management system</h2>
+						<p class="description">This project are compose of three parts :</p>
+						<p class="description text">- <b>Website application</b> -</p>
+						<p class="description text">- <b>Web base Management</b> -</p>
+						<p class="description text">- <b>Android app (MIT APP)</b> -</p>
+						<div class="btn-content">
+							<!-- <button class="button">View more</button> -->
+							<!-- <button class="btn2 button" onclick="embedshow()">Watch now</button> -->
+							<input type="button" class="btn2 button" value="Watchnow" onclick="embedshow()">
+						</div>
+					</div>
+				</div>
+
+				<div class="card swiper-slide">
+					<div class="image-content">
+						<span class="overlay"></span>
+						<div class="card-image">
+							<img src="img/hoa.png" alt="" class="card-img">
+						</div>
+					</div>
+					<div class="card-content">
+						<h2 class="name">HOA account</h2>
+						<p class="description">This project are compose of three parts :</p>
+						<p class="description text">- <b>Website application</b> -</p>
+						<p class="description text">- <b>Management (VB.net)</b> -</p>
+						<p class="description text">- <b>Android app (MIT APP)</b> -</p>
+						<div class="btn-content">
+							<!-- <button class="button">View more</button> -->
+							<button class="btn3 button" onclick="embedshow()">Watch now</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div> <!-- The bullet found in the bottom of the div elements. -->
+	</div>
+	</div>
+
+
+<!-- Footer part -->
+		<footer>
+			<hr>
+			<div class="footer-info">
+				<div class="footer-width about">
+					<h2>About</h2>
+					<p>I'm darwin ortozar, student from Colegio de Montalban and now developing projects such as web and desktop application.</p>
+					
+					<div class="logo footerlogo">
+						<div class="logo-background port">
+							<span>PORT</span>
+						</div>
+						<div class="logo-background folio">
+							<span>FOLIO</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-width link">
+					<h2>My Projects</h2>
+					<p><ion-icon name="checkbox-outline"></ion-icon> Desktop application (vb.net)</p>
+					<p><ion-icon name="checkbox-outline"></ion-icon> Management system (vb.net)</p>
+					<p><ion-icon name="checkbox-outline"></ion-icon> Web application (html,css,javascript)</p>
+					<p><ion-icon name="checkbox-outline"></ion-icon> MIT Application (android)</p>
+					<p>Database</p>
+					<p><ion-icon name="cloud-outline"></ion-icon> phpmyadmin</p>
+					<p><ion-icon name="cloud-outline"></ion-icon> firebase</p>
+					<p><ion-icon name="cloud-outline"></ion-icon> SQL Server management studio</p>
+				</div>
+
+				<div class="footer-width contact">
+					<h2>Email address</h2>
+					<p>Get in touch,<br> your can hire me as a developer<br></p>
+					<a href="mailto:darwinortozar@gmail.com"><button class="btn-email"><ion-icon name="mail-outline"></ion-icon> SEND EMAIL</button>
+					</a>
+				</div>
+			</div>
+			<div class="footer-lower">
+				<hr>
+					<div class="menu-icons sociallogo">
+						<a href="https://www.facebook.com/darwin.ortozar.5" target="_blank"><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon></a>
+						<a href="https://www.youtube.com/channel/UCXUOTq7fxMgtyyJaJlK7E5Q" target="_blank"><ion-icon name="logo-youtube" class="icon-youtube"></ion-icon></a>
+						<a href="https://www.facebook.com/darwin.ortozar.5" target="_blank"><ion-icon name="logo-tiktok" class="icon-tiktok"></ion-icon></a>
+						<a href="https://www.linkedin.com/in/darwin-ortozar-82b32b268/" target="_blank"><ion-icon name="logo-linkedin" class="icon-linkedin"></ion-icon></a>
+						<a href="https://github.com/DarwinGit03" target="_blank"><ion-icon name="logo-github" class="icon-tiktok"></ion-icon></a>
+					</div>
+			</div>
+		</footer>
+
+
+	</div>
+
+
+
+<!-- Script for typing -->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+	<script src="nav.js"></script>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<!-- For icons -->
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script>
+		let show = document.getElementById("sharelink");
+		function showdialog(){
+			show.classList.add("open-popup");
+		}
+		function closedialog(){
+			show.classList.remove("open-popup");
+		}
+		let show2 = document.getElementById("embed");
+		function embedshow(){
+			show2.classList.add("close-embed");
+		}
+		function embedclose(){
+			show2.classList.remove("close-embed");
+		}
+
+	</script>
+
+</body>
+<!-- swiper js This extension use to have slider-->
+<script src="swiper-bundle.min.js"></script>
+<!-- javascrip -->
+<script src="slidercontent.js"></script>
+
+<!-- For the video embeded -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/embedty.js" defer></script>
+</html>
